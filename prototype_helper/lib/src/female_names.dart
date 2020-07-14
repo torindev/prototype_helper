@@ -1,4 +1,4 @@
-const kFemaleNames = <String>[
+const kFemaleNames = const <String>[
   'Emma',
   'Olivia',
   'Ava',
