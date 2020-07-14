@@ -1,13 +1,21 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:prototype_helper/prototype_helper.dart';
+import 'package:prototype_helper/src/female_names.dart';
+import 'package:prototype_helper/src/male_names.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  test('random female name', () {
+    expect(kFemaleNames.length, 500);
+    for (int i = 0; i < kFemaleNames.length; i++) {
+      expect(kFemaleNames[i].contains(','), false);
+    }
+  });
+
+  test('random male name', () {
+    expect(kMaleNames.length, 256);
+    for (int i = 0; i < kMaleNames.length; i++) {
+      expect(kMaleNames[i].contains(','), false);
+    }
   });
 }
