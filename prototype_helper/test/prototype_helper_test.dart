@@ -6,16 +6,18 @@ import 'package:prototype_helper/src/male/male_names.dart';
 
 void main() {
   test('random female name', () {
-    expect(kFemaleNames.length, 500);
+//    expect(kFemaleNames.length, 500);
     for (int i = 0; i < kFemaleNames.length; i++) {
       expect(kFemaleNames[i].contains(','), false);
     }
+    expect(kFemaleNames.length, kFemaleNames.toSet().length);
   });
 
   test('random male name', () {
-    expect(kMaleNames.length, 256);
+//    expect(kMaleNames.length, 256);
     for (int i = 0; i < kMaleNames.length; i++) {
       expect(kMaleNames[i].contains(','), false);
     }
+    expect(kMaleNames.length, kMaleNames.toSet().length);
   });
 }
