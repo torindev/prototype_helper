@@ -53,6 +53,30 @@ List<String> get femaleNamesList => [...kFemaleNames];
 List<String> get femalePhotosSmallList => [...kFemalePhotosSmall];
 List<String> get femalePhotosBigList => [...kFemalePhotosBig];
 
+List<String> getFemaleSmallAndBigRandomPhotos() {
+  int index = Random().nextInt(kFemalePhotosSmall.length);
+  List<String> result = [];
+  result.add(getFemaleSmallPhoto(index));
+  result.add(getFemaleBigPhoto(index));
+  return result;
+}
+
+String getFemaleSmallPhoto(int index) {
+  String result = '';
+  try {
+    result = kFemalePhotosSmall[index];
+  } catch (error) {}
+  return result;
+}
+
+String getFemaleBigPhoto(int index) {
+  String result = '';
+  try {
+    result = kFemalePhotosBig[index];
+  } catch (error) {}
+  return result;
+}
+
 // MALE
 String get randomMaleName => kMaleNames[Random().nextInt(kMaleNames.length)];
 String get randomMaleFullName => '$randomMaleName $randomSurname';
@@ -64,3 +88,27 @@ String get randomMalePhotoBig =>
 List<String> get maleNamesList => [...kMaleNames];
 List<String> get malePhotosSmallList => [...kMalePhotosSmall];
 List<String> get malePhotosBigList => [...kMalePhotosBig];
+
+List<String> getMaleSmallAndBigRandomPhotos() {
+  int index = Random().nextInt(kMalePhotosSmall.length);
+  List<String> result = [];
+  result.add(getMaleSmallPhoto(index));
+  result.add(getMaleBigPhoto(index));
+  return result;
+}
+
+String getMaleSmallPhoto(int index) {
+  String result = '';
+  try {
+    result = kMalePhotosSmall[index];
+  } catch (error) {}
+  return result;
+}
+
+String getMaleBigPhoto(int index) {
+  String result = '';
+  try {
+    result = kMalePhotosBig[index];
+  } catch (error) {}
+  return result;
+}
