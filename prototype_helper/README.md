@@ -1,34 +1,54 @@
 # prototype_helper
 
-A new Flutter package.
+A small package, that provides various test data such as first names, last names, photographs, lorem ipsum etc. This can be useful when prototyping an application without a server side (because server side not ready yet), or when creating a project for test drive some features and you lazy to use Rest API
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+The package provides a convenient API for getting test data.
+**Available methods:**
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```dart
+// COMMON
+String get randomSurname;
+String get randomLastName;
+String get randomLoremIpsumParagraph;
+List<String> get loremIpsumParagraphs;
+String get loremIpsumFullTextSeparatedBySpaces;
+String get loremIpsumFullTextSeparatedByLineBreak;
+String getLoremIpsumByWordsCount(int count);
 
-**Photo authors:**
+// FEMALE
+String get randomFemaleName;
+String get randomFemaleFullName;
+String get randomFemalePhotoSmall;
+String get randomFemalePhotoBig;
+List<String> get femaleNamesList;
+List<String> get femalePhotosSmallList;
+List<String> get femalePhotosBigList;
+List<String> getFemaleSmallAndBigRandomPhotos(); // Returns pair of female photos ([0] - small, [1] - big)
+String getFemaleSmallPhoto(int index);
+String getFemaleBigPhoto(int index);
 
-- Photo by Guilherme Almeida from Pexels
-- Photo by Vinicius Wiesehofer from Pexels
-- Photo by Ketut Subiyanto from Pexels
-- Photo by Moose Photos from Pexels
-- Photo by Andrea Piacquadio from Pexels
-- Photo by Daniel Xavier from Pexels
-- Photo by Matheus Bertelli from Pexels
-- Photo by Godisable Jacob from Pexels
-- Photo by Arianna Jadé from Pexels
-- Photo by Elle Hughes from Pexels
-- Photo by Wallace Chuck from Pexels
-- Photo by ArtHouse Studio from Pexels
-- Photo by Chloe Kala from Pexels
-- Photo by Tim Savage from Pexels
-- Photo by Simon Robben from Pexels
-- Photo by Justin Shaifer from Pexels
+// MALE
+String get randomMaleName;
+String get randomMaleFullName;
+String get randomMalePhotoSmall;
+String get randomMalePhotoBig;
+List<String> get maleNamesList;
+List<String> get malePhotosSmallList;
+List<String> get malePhotosBigList;
+List<String> getMaleSmallAndBigRandomPhotos(); // Returns pair of male photos ([0] - small, [1] - big)
+String getMaleSmallPhoto(int index);
+String getMaleBigPhoto(int index);
+```
 
+Using photos from [https://www.pexels.com/](https://www.pexels.com/), **such authors:**
+
+```
+Guilherme Almeida from Pexels, Vinicius Wiesehofer from Pexels, Ketut Subiyanto from Pexels, 
+Moose Photos from Pexels, Andrea Piacquadio from Pexels, Daniel Xavier from Pexels, 
+Matheus Bertelli from Pexels, Godisable Jacob from Pexels, Arianna Jadé from Pexels, 
+Elle Hughes from Pexels, Wallace Chuck from Pexels, ArtHouse Studio from Pexels, 
+Chloe Kala from Pexels, Tim Savage from Pexels, Simon Robben from Pexels, 
+Justin Shaifer from Pexels
+```
